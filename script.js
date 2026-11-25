@@ -70,7 +70,7 @@ if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
     });
 
     // Clinic photo tilts gently in 3D
-    const box = document.querySelector(".pic"), photo = document.querySelector(".pic .main");
+    const box = document.querySelector(".pic:not(.logo)"), photo = document.querySelector(".pic:not(.logo) .main");
     if (box && photo) {
       box.addEventListener("pointermove", (e) => {
         const r = box.getBoundingClientRect();

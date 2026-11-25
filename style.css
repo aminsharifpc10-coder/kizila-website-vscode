@@ -64,3 +64,6 @@ footer{background:var(--deep);color:#c5dde5;text-align:center;padding:26px 5vw;f
 .about .portrait{object-position:top;max-height:560px}
 .about .cert{width:min(100%,260px);height:170px;margin-top:16px;box-shadow:none;border:1px solid var(--line)}
 @media(max-width:780px){.about.doc{grid-template-columns:1fr}.about .portrait{max-width:320px}}
+
+/* logo only: no frame, no shadow, slowly turning */
+.pic.logo .main{border:0;box-shadow:none;background:none;mix-blend-mode:multiply;animation:spin 50s linear infinite}
