@@ -138,3 +138,23 @@ html{-webkit-text-size-adjust:100%}
 }
 /* no sticky "hover" jumps on touch screens */
 @media(hover:none){.btn:hover,.quick a:hover{transform:none}.strip figure:hover img{transform:none}}
+
+/* ===== MOBILE FIXES 2: portrait shape and hero typography ===== */
+@media(max-width:780px){
+  /* portrait: keep natural proportions, show face and shoulders */
+  .about .portrait{width:min(78%,280px);height:auto;aspect-ratio:3/4;max-height:none;max-width:none;object-fit:cover;object-position:center 20%;margin:0 auto;border-radius:18px}
+  .about .cert{height:auto}
+  .about h2{text-align:center}
+
+  /* hero: clear size steps from heading down to small text */
+  .hero{padding:22px 6vw 72px;gap:16px}
+  .hero .pic.logo{width:min(36vw,140px)}
+  .hero h1{font-size:clamp(1.85rem,8.6vw,2.35rem);line-height:1.15;letter-spacing:-.2px}
+  .hero h1 span:nth-child(2){font-size:clamp(1.05rem,4.8vw,1.3rem);line-height:1.3;margin-top:8px;letter-spacing:0;font-family:var(--body);font-weight:600}
+  .hero .ml{font-size:1.1rem;line-height:1.5;margin-top:16px;padding:0 4px}
+  .hero .lead{font-size:.98rem;line-height:1.6;margin-top:10px;max-width:22em}
+  .hero .actions{margin-top:20px}
+  .hero .actions .btn{font-size:1rem;padding:14px 18px}
+  .hero .open{font-size:.9rem;margin-top:14px}
+  .wa{padding:10px 16px;font-size:.95rem}
+}
