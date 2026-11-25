@@ -158,3 +158,8 @@ html{-webkit-text-size-adjust:100%}
   .hero .open{font-size:.9rem;margin-top:14px}
   .wa{padding:10px 16px;font-size:.95rem}
 }
+
+/* ===== MOBILE FIX 3: show the whole portrait, nothing cropped ===== */
+@media(max-width:780px){
+  .about.doc .portrait{width:min(82%,300px)!important;height:auto!important;max-height:none!important;aspect-ratio:700/933!important;object-fit:contain!important;object-position:center!important;background:var(--mist);margin:0 auto}
+}
