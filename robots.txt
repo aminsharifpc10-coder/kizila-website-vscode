@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://aminsharifpc10-coder.github.io/kizila-website-vscode/sitemap.xml

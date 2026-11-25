@@ -98,3 +98,7 @@ footer{background:var(--ink);color:#b9ccc7;text-align:center;padding:26px 5vw;fo
   *{animation:none!important;transition:none!important;scroll-behavior:auto}
   h1 span,.lead,.hero .ml,.hero .actions,.hero .open,.js .reveal{opacity:1;transform:none}
 }
+
+.page{padding-top:90px}.page .sec{padding-top:40px}.h1s{font:400 clamp(1.9rem,4.4vw,3rem)/1.15 var(--head);margin-bottom:14px}.gap{margin-top:34px}.page p{max-width:42em;margin-bottom:10px}
+.areas a{display:inline-block;margin:0 10px 10px 0;padding:8px 16px;border:1px solid #cfdad6;border-radius:999px;text-decoration:none;transition:background .2s}.areas a:hover{background:var(--mist)}
+.btn.ghost.call{color:var(--blue)}
