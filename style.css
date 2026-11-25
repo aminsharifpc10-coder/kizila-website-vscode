@@ -71,3 +71,70 @@ footer{background:var(--deep);color:#c5dde5;text-align:center;padding:26px 5vw;f
 /* logo: the round frame turns, the image fills it so the full circle shows */
 .pic.logo{width:min(80vw,380px);aspect-ratio:1;border-radius:50%;overflow:hidden;mix-blend-mode:multiply;animation:spin 50s linear infinite}
 .pic.logo .main{width:100%;height:100%;max-height:none;aspect-ratio:auto;object-fit:cover;border:0;border-radius:0;box-shadow:none;animation:none;mix-blend-mode:normal;transition:none}
+
+/* ===== MOBILE FRIENDLY LAYOUT (phones and small tablets only; desktop unchanged) ===== */
+html{-webkit-text-size-adjust:100%}
+@media(max-width:780px){
+  body{font-size:1rem;line-height:1.65;overflow-x:clip}
+  p,h1,h2,h3,summary{overflow-wrap:anywhere}
+
+  /* top bar and header */
+  .bar{justify-content:center;text-align:center;padding:8px 5vw}
+  .top{padding:8px 5vw;gap:10px}
+  .brand{font-size:1rem;gap:8px;min-width:0;line-height:1.15}
+  .brand img{width:36px;height:36px;flex:none}
+  .top nav{flex:none;gap:0}
+  .top .btn.small{padding:9px 14px;font-size:.88rem;white-space:nowrap}
+
+  /* hero: logo on top (smaller), text centred, full-width buttons */
+  .hero{padding:28px 5vw 76px;gap:22px;text-align:center}
+  .hero .pic.logo{order:-1;width:min(44vw,170px)}
+  h1{font-size:clamp(1.8rem,8vw,2.4rem)}
+  .ml{margin-top:14px;font-size:1.05rem}
+  .lead{margin-left:auto;margin-right:auto}
+  .actions{gap:12px;margin-top:22px}
+  .hero .actions{justify-content:center}
+  .actions .btn{flex:1 1 100%;text-align:center;padding:14px 20px}
+
+  /* quick action boxes */
+  .quick{margin-top:-44px;gap:12px;padding:0 5vw}
+  .quick a{padding:14px 16px}
+
+  /* sections */
+  .sec{padding:52px 5vw}
+  .page .sec{padding-top:28px}
+  h2{font-size:clamp(1.6rem,7vw,2rem)}
+  .sub{margin-bottom:20px}
+  .acc summary{padding:18px 2px;font-size:1.1rem;gap:14px;align-items:center}
+  .acc details p{padding:0 2px 20px}
+
+  /* about */
+  .about.doc{gap:24px}
+  .about .portrait{max-width:260px;margin:0 auto;max-height:none}
+  .about .cert{width:100%;max-width:300px;height:auto;aspect-ratio:3/2}
+
+  /* clinic photo strip */
+  .strip{gap:14px;margin:0 -5vw;padding:0 5vw 14px;scroll-padding-left:5vw}
+  .strip figure{flex-basis:72vw}
+  .strip img{height:320px}
+
+  /* visit */
+  .visit{gap:28px}
+  iframe{height:300px}
+
+  /* area chips and sub pages */
+  .areas a{margin:0 8px 10px 0;padding:9px 14px}
+  .h1s{font-size:clamp(1.6rem,7vw,2.1rem)}
+  .gap{margin-top:28px}
+
+  /* footer and floating chat button */
+  footer{padding:22px 5vw calc(84px + env(safe-area-inset-bottom,0px))}
+  .wa{right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));padding:12px 18px}
+}
+@media(max-width:380px){
+  .brand{font-size:.92rem}
+  .top .btn.small{padding:8px 11px;font-size:.82rem}
+  .strip figure{flex-basis:80vw}
+}
+/* no sticky "hover" jumps on touch screens */
+@media(hover:none){.btn:hover,.quick a:hover{transform:none}.strip figure:hover img{transform:none}}
